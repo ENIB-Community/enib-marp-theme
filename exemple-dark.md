@@ -4,7 +4,7 @@ paginate: true
 theme: enib-theme-dark
 author: r8blerio@enib.fr
 class: lead
-footer: enib-theme-light
+footer: enib-theme-dark
 header: ENIB marp theme
 ---
 
