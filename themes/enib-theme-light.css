@@ -1,0 +1,376 @@
+@charset "UTF-8";
+/*!
+ * Marp ENIB theme light.
+ * @theme enib-theme-light
+ * @author Ruben BLÉRIOT r8blerio@enib.fr
+ *
+ * @auto-scaling true
+ * @size 4:3 960px 720px
+ * @size 16:9 1280px 720px
+ */
+
+:root {
+    --enib-primary-orange: #ea8a00;
+    --enib-primary-black: #3e3d40;
+    --enib-primary-pink: #e9607c;
+    --enib-primary-blue: #90d1df;
+    --enib-primary-white: #f7f4f1;
+    
+    --enib-secondary-maganta: #9f9fca;
+    --enib-secondary-gray: #c1b5a2;
+    --enib-secondary-green: #a2a93f ;
+    --enib-secondary-red: #e26856;
+    --enib-secondary-blue: #62b5cf;
+
+    --enib-foreground: #282a36;
+    --enib-background: #ffffff;
+    --enib-current-line: #62b5cf;
+    --enib-comment: #6272a4;
+    --enib-link: #0026ff;
+    --enib-block-background: #f7f4f1;
+    --enib-block-line: #c0c0c0;
+}
+
+.hljs {
+    display: block;
+    overflow-x: auto;
+    padding: 0.5em;
+    background: var(--enib-background);
+}
+
+/* Enib Foreground */
+.hljs,
+.hljs-subst,
+.hljs-typing,
+.hljs-variable,
+.hljs-template-variable {
+    color: var(--enib-foreground);
+}
+
+/* Enib Comment */
+.hljs-comment,
+.hljs-quote,
+.hljs-deletion {
+    color: var(--enib-comment);
+}
+
+/* Enib Cyan */
+.hljs-meta .hljs-doctag,
+.hljs-built_in,
+.hljs-selector-tag,
+.hljs-section,
+.hljs-link,
+.hljs-class {
+    color: var(--enib-secondary-blue);
+}
+
+
+/* Enib Green */
+.hljs-title {
+    color: var(--enib-secondary-green);
+}
+
+/* Enib Orange */
+.hljs-params {
+    color: var(--enib-primary-orange);
+}
+
+/* Enib Pink */
+.hljs-keyword {
+    color: var(--enib-primary-pink);
+}
+
+/* Enib Purple */
+.hljs-literal,
+.hljs-number {
+    color: var(--enib-secondary-maganta);
+}
+
+/* Enib Red */
+.hljs-regexp {
+    color: var(--enib-secondary-red);
+}
+
+/* Enib Gray */
+.hljs-string,
+.hljs-name,
+.hljs-type,
+.hljs-attr,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition,
+.hljs-template-tag {
+    color: var(--enib-secondary-gray);
+}
+
+.hljs-keyword,
+.hljs-selector-tag,
+.hljs-literal,
+.hljs-title,
+.hljs-section,
+.hljs-doctag,
+.hljs-type,
+.hljs-name,
+.hljs-strong {
+    font-weight: bold;
+}
+
+.hljs-params,
+.hljs-emphasis {
+    font-style: italic;
+}
+
+h1,
+h2 {
+    margin: 0.5em 0 0 0;
+    color: var(--enib-primary-orange);
+}
+
+h3,
+h4,
+h5,
+h6  {
+    margin: 0.5em 0 0 0;
+    color: var(--enib-primary-black);   
+}
+
+h1 strong,
+h2 strong,
+h3 strong,
+h4 strong,
+h5 strong,
+h6 strong {
+    font-weight: inherit;
+}
+
+h1 {
+    font-size: 1.8em;
+}
+
+h2 {
+    font-size: 1.5em;
+}
+
+h3 {
+    font-size: 1.3em;
+}
+
+h4 {
+    font-size: 1.1em;
+}
+
+h5 {
+    font-size: 1em;
+}
+
+h6 {
+    font-size: 0.9em;
+}
+
+p,
+blockquote {
+    margin: 1em 0 0 0;
+}
+
+ul > li,
+ol > li {
+  margin: 0.3em 0 0 0;
+  color:  var(--enib-foreground);
+}
+
+ul > li > p,
+ol > li > p {
+  margin: 0.6em 0 0 0;
+}
+
+code {
+    display: inline-block;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.8em;
+    letter-spacing: 0;
+    margin: -0.1em 0.15em;
+    padding: 0.1em 0.2em;
+    vertical-align: baseline;
+    border: solid 2px var(--enib-block-line);
+    border-radius: 5px;
+    color: var(--enib-foreground);
+}
+
+pre {
+    display: block;
+    margin: 1em 0 0;
+    min-height: 1em;
+    overflow: visible;
+}
+
+pre code {
+    box-sizing: content-box;
+    margin: 0;
+    min-width: 100%;
+    padding: 0.5em;
+    font-size: 0.7em;
+}
+    
+blockquote {
+    margin: 1em 0 0 0;
+    padding: 0 1em;
+    position: relative;
+    text-align: left;
+    color: var(--enib-comment);
+}
+
+blockquote::after,
+blockquote::before {
+    content: '“';
+    display: block;
+    font-family: 'Times New Roman', serif;
+    font-weight: bold;
+    position: absolute;
+}
+  
+blockquote::before {
+    top: 0;
+    left: 0;
+}
+
+blockquote::after {
+    right: 0;
+    bottom: 0;
+    transform: rotate(180deg);
+}
+
+blockquote > *:first-child {
+    margin-top: 0;
+}
+
+mark {
+    background: transparent;
+}
+
+table {
+    border-spacing: 0;
+    border-collapse: collapse;
+    margin: 1em 0 0;
+}
+
+table th,
+table td {
+  padding: 0.2em 0.4em;
+  border-width: 2px;
+  border-style: solid;
+}
+
+header,
+footer,
+section::after {
+    box-sizing: border-box;
+    font-size: 66%;
+    height: 70px;
+    line-height: 50px;
+    overflow: hidden;
+    padding: 10px 25px;
+    position: absolute;
+}
+
+header {
+    left: 0;
+    right: 0;
+    top: 0;
+}
+
+footer {
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+section {
+    background-color: var(--enib-background);
+    color: var(--enib-foreground);
+    font-size: 35px;
+    font-family: Gotham;
+    line-height: 1.35;
+    letter-spacing: 1.25px;
+    padding: 70px;
+}
+
+section > *:first-child,
+section > header:first-child + * {
+    margin-top: 0;
+}
+
+section a,
+section mark {
+    color: var(--enib-link);
+}
+
+section code {
+    background: var(--enib-block-background);
+    color: var(--enib-foreground);
+}
+
+section h1 strong,
+section h2 strong,
+section h3 strong,
+section h4 strong,
+section h5 strong,
+section h6 strong {
+    color: var(--enib-current-line);
+}
+
+section pre > code {
+    background: var(--enib-block-background);
+    min-width: 1280px;
+}
+
+section [data-size='4:3'] pre > code {
+    min-width: 720px;
+  }
+
+section header,
+section footer,
+section section::after,
+section blockquote::before,
+section blockquote::after {
+    color: var(--enib-secondary-maganta);
+}
+
+section table th,
+section table td {
+    border-color:  var(--enib-comment);
+}
+
+section table thead th {
+    background: var(--enib-primary-blue);
+    color: var(--enib-foreground);
+}
+
+section table tbody > tr:nth-child(even) td,
+section table tbody > tr:nth-child(even) th {
+    background: var(--enib-primary-white);
+}
+
+section::after {
+    right: 0;
+    bottom: 0;
+    font-size: 80%;
+}
+
+section:where(.lead) {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+}
+
+section:where(.lead) h1,
+section:where(.lead) h2,
+section:where(.lead) h3,
+section:where(.lead) h4,
+section:where(.lead) h5,
+section:where(.lead) h6 {
+    text-align: center;
+}
+
+section:where(.lead) pre {
+    --preserve-aspect-ratio: xMidYMid meet;
+}
